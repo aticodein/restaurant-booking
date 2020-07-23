@@ -7,6 +7,42 @@
 </head>
 <body>
     <h1>Restaurant Booking</h1>
-    <p>Here will be the bookings</p>
+    <a href="/add_booking"> Create New Booking</a>
+    
+    <table>
+       {% for item in BookingItems %}
+          <tr>
+             <td>Booking Name: {{ item.name }}</td> 
+          </tr>
+          <tr>
+            <td>Booking Date: {{ item.date }}</td>
+          </tr>
+          <tr>
+            <td>Booking Time: {{ item.time }}</td>
+          </tr>
+          <tr>
+           <td>Number of Adults: {{ item.adultNum }}</td>
+          </tr>
+          <tr>
+           <td>Number of Children: {{ item.childNum }}</td>
+          </tr>
+          <tr>
+           <td>Number of High Chair req.: {{ item.highChair }}</td>
+          </tr>
+          <tr>
+           <td>Room number: {{ item.roomNum }}</td>
+          </tr>
+          <tr>
+           <td>Comment: {{ item.comment }}</td>
+          </tr>
+          <!--<tr>
+           {% if item.email %}
+           <td>Email: {{ item.email }}</td>
+           {% else %}
+           <td>No email given.</td>
+           {% endif %}
+          </tr>-->
+       {% endfor %}
+    </table>
 </body>
 </html>

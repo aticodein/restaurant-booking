@@ -19,3 +19,6 @@ class bookingItem(models.Model):
                                   null=False, blank=False)
     comment = models.CharField(max_length=199, null=False, blank=False)
     email = models. EmailField(max_length=254, null=False, blank=True)
+
+    def __str__(self):
+        return self.name
