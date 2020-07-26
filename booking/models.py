@@ -4,9 +4,9 @@ from django.db import models
 
 
 class bookingItem(models.Model):
-    name = models.CharField(max_length=29, null=False, blank=False)
-    time = models.DecimalField(max_digits=4, decimal_places=2,
-                               null=False, blank=False)
+    name = models.CharField(max_length=49, null=False, blank=False)
+    time = models.TimeField(auto_now=False, auto_now_add=False,
+                            null=False, blank=False)
     adultNum = models.DecimalField(max_digits=2, decimal_places=0,
                                    null=False, blank=False)
     date = models.DateField(auto_now=False, auto_now_add=False,

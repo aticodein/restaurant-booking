@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking List</title>    
+    <title>Booking List</title>
 </head>
 <body>
-    <h1>Add New Bookings</h1>
+    <h1>Edit Bookings</h1>
 
-    <form method="POST" action="add_booking">
+    <form method="POST">
        {% csrf_token %}
-       {{ form.as_p }} 
+       {{ form.as_p }}
 
        <div>
           <p>
-          <button type="submit">Add Booking</button>
+          <button type="submit">Update Booking</button>
           </p>
        </div>
     </form>
