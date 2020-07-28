@@ -9,8 +9,8 @@ class bookingItemForm(forms.ModelForm):
                   'highChair', 'comment', 'email']
         widgets = {
             'date': forms.DateInput(attrs={'class': 'date',
-                                    'placeholder': '2020-07-26'},
+                                    'placeholder': 'Only this format! 2020-07-26'},
                                     format='%Y-%m-%d'),
             'time': forms.TimeInput(attrs={'class': 'time',
-                                    'placeholder': '18:30'})
+                                    'placeholder': 'Only this format! 18:30'})
         }
